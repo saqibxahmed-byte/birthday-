@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 16th Birthday Jannat 🎂</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#ff5f9e,#ff9a9e);
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  overflow:hidden;
+}
+
+.container{
+  text-align:center;
+  width:90%;
+  max-width:400px;
+}
+
+.hidden{display:none;}
+
+button{
+  margin-top:20px;
+  padding:12px 28px;
+  border:none;
+  border-radius:30px;
+  background:white;
+  color:#ff4e8b;
+  font-size:1rem;
+  cursor:pointer;
+}
+
+button:hover{transform:scale(1.05);}
+
+.cat{
+  font-size:6rem;
+  animation:bounce 1.5s infinite;
+  position:relative;
+}
+
+.cap{
+  position:absolute;
+  top:-35px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:2.5rem;
+}
+
+@keyframes bounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-15px)}
+}
+
+.decor{
+  font-size:2.5rem;
+  animation:fall 3s infinite;
+}
+
+@keyframes fall{
+  from{transform:translateY(-50px)}
+  to{transform:translateY(300px)}
+}
+
+.cake{
+  font-size:5rem;
+}
+
+.candle{
+  font-size:2rem;
+  animation:flicker 0.8s infinite;
+}
+
+@keyframes flicker{
+  0%,100%{opacity:1}
+  50%{opacity:0.6}
+}
+
+.message{
+  background:rgba(255,255,255,0.15);
+  padding:20px;
+  border-radius:20px;
+  margin-top:20px;
+  animation:pop 1s ease;
+}
+
+@keyframes pop{
+  from{transform:scale(0.8);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- STEP 1 -->
+  <div id="step1">
+    <div class="cat">🐱
+      <div class="cap">🎉</div>
+    </div>
+    <h2>Happy Birthday Jannat 🎂</h2>
+    <button onclick="showDecor()">Decoration 🎀</button>
+  </div>
+
+  <!-- STEP 2 -->
+  <div id="step2" class="hidden">
+    <div class="decor">🎈 🎊 🎈 🎊</div>
+    <h2>Decorations Started!</h2>
+    <button onclick="showCake()">Bring Cake 🎂</button>
+  </div>
+
+  <!-- STEP 3 -->
+  <div id="step3" class="hidden">
+    <div class="cake">🎂</div>
+    <div class="candle">🕯️ 🕯️ 🕯️</div>
+    <button onclick="blow()">Blow Candles 🔥</button>
+  </div>
+
+  <!-- STEP 4 -->
+  <div id="step4" class="hidden">
+    <div class="message">
+      <h2>Happy 16th Birthday, Jannat! 💖</h2>
+      <p>
+        Today is the most special day because it’s the day the most beautiful soul came into this world and made it brighter just by being herself.  
+        May this year bring you endless smiles, confidence, and moments that make you truly happy ✨
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function showDecor(){
+  step1.classList.add("hidden");
+  step2.classList.remove("hidden");
+}
+
+function showCake(){
+  step2.classList.add("hidden");
+  step3.classList.remove("hidden");
+}
+
+function blow(){
+  step3.classList.add("hidden");
+  step4.classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
